@@ -1,0 +1,1 @@
+  🚀[Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript](https://github.com/ixartz/Next-js-Boilerplate.git)
