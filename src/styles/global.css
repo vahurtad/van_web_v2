@@ -1,11 +1,24 @@
 @tailwind base;
 
-html {
-  background-color: #FFE5B4;
+--rich-black-fogra-39: #0a0a0aff;
+--eerie-black: #1a181aff;
+--davys-grey: #505050ff;
+--persian-red: #d1342fff;
+--black-olive: #434038ff;
+--dutch-white: #eee3c1ff;
+
+
+--pink : #FF95C5
+--red: #FF0000
+// red round border
+
+.dark {
+  background-color: #3B0000;
+  color: #FFF6CD;
 }
 
-[data-theme='dark'] {
-  background-color: #190204;
+.light{
+  background-color: #FFF6CD;  
 }
 
 a {
