@@ -23,5 +23,10 @@
   },
   "[postcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.openPositioning": "right",
+  "workbench.sideBar.location": "right",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

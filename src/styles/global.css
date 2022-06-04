@@ -1,16 +1,7 @@
 @tailwind base;
 
---rich-black-fogra-39: #0a0a0aff;
---eerie-black: #1a181aff;
---davys-grey: #505050ff;
---persian-red: #d1342fff;
---black-olive: #434038ff;
---dutch-white: #eee3c1ff;
-
-
 --pink : #FF95C5
 --red: #FF0000
-// red round border
 
 .dark {
   background-color: #3B0000;
@@ -33,10 +24,72 @@ a:hover {
 
 @tailwind utilities;
 
+.toggle-checkbox:checked {
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: #68D391;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #68D391;
+}
+
 .content p {
   @apply my-6;
 }
 
 .content ul {
   @apply my-6;
+}
+
+.font-canopee {
+  letter-spacing: .05em;
+  
+}
+
+.font-nanjaunemaxi {
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+
+.font-nanjaunemini {
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+@layer base {
+  @font-face {
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Metropolis-Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: Pilowlava;
+    font-weight: 400;
+    src: url("../fonts/Pilowlava-Regular.otf") format('opentype'); 
+  }
+
+  @font-face {
+    font-family: NaN Jaune Mini;
+    src: url("../fonts/NaNJaune-MiniBlond-1.otf") format('opentype'); 
+  }
+
+  @font-face {
+    font-family: NaN Jaune Maxi;
+    src: url("../fonts/NaNJaune-MaxiBold-1.otf") format('opentype'); 
+  }
+
+  @font-face {
+    font-family: Canopee;
+    src: url("../fonts/canopee.woff"); 
+    letter-spacing: .3em;
+  }
+
+  @font-face {
+    font-family: Literata;
+    src: url("../fonts/Literata_20pt-Regular.ttf"); 
+  }
 }

@@ -1,6 +1,14 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      metropolis: ['Metropolis', 'Roboto', 'Arial', 'sans-serif'],
+      pilowlava: ['Pilowlava'],
+      nanjaunemidi: ['NaN Jaune Mini'],
+      nanjaunemaxi: ['NaN Jaune Maxi'],
+      canopee: ['Canopee'],
+      literata: ['Literata'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -38,11 +46,14 @@ module.exports = {
           900: '#2a4365',
         },
         pink: {
-          900: '#FF95C5',
+          800: '#FF95C5',
+          900: '#f086a3',
         },
         red: {
-          800: '#CE1F6A',
-          900: '#FF0000',
+          700: '#F56C5D',
+          800: '#ff6347',
+          900: '#cc2000',
+          // 900: '#c90442',
         },
         yellow: {
           900: '#FFF6CD',

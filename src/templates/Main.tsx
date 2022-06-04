@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
+import { ThemeChanger } from '@/layouts/Themes';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
@@ -9,29 +10,31 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="h-screen px-1 text-gray-700 antialiased sm:px-6 md:px-8">
     {props.meta}
 
-    <div className="mx-auto max-w-screen-md">
-      <div className="border-b border-gray-300">
-        <div className="pt-16 pb-8">
-          <div className="light:text-red-900 text-3xl font-bold text-red-800 dark:text-pink-900">
+    <div className=" mx-auto h-screen max-w-screen-lg px-8">
+      <div className="border-b border-pink-300 ">
+        <div className="pt-16 pb-8 ">
+          <div className="font-pilowlava text-3xl font-bold text-pink-600 dark:text-pink-900 sm:text-6xl">
             {AppConfig.title}
           </div>
-          <div className="text-xl dark:text-yellow-900">
+          <div className=" font-metropolis text-xl dark:text-yellow-900">
             {AppConfig.description}
           </div>
         </div>
-        <div>
-          <ul className="flex flex-wrap text-xl font-bold dark:text-yellow-900">
+
+        {/* // Menu */}
+        <div className="font-nanjaunemaxi">
+          <ul className=" relative flex flex-wrap text-xl  dark:text-yellow-900">
             <li className="mr-6">
               <Link href="/">
-                <a className="border-none hover:text-gray-900">Home</a>
+                <a className="border-none hover:text-gray-900">home</a>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/about/">
-                <a className="border-none  hover:text-gray-900">About</a>
+                <a className="border-none  hover:text-gray-900">about</a>
               </Link>
             </li>
             <li className="mr-6">
@@ -39,16 +42,18 @@ const Main = (props: IMainProps) => (
                 className="border-none hover:text-gray-900"
                 href="https://github.com/ixartz/Next-js-Boilerplate"
               >
-                GitHub
+                github
               </a>
             </li>
+            <ThemeChanger />
           </ul>
         </div>
       </div>
 
-      <div className="content py-5 text-xl">{props.children}</div>
+      <div className="content py-5 text-xl ">{props.children}</div>
+      {/* <div className="mt-20 text-left xl:w-2/4">{props.children}</div> */}
 
-      <div className="border-t border-gray-300 py-8 text-center text-sm">
+      <div className="border-t border-pink-300 py-8 text-center text-sm">
         Powered with{' '}
         <span role="img" aria-label="Love">
           ♥
