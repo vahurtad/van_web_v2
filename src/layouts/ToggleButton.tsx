@@ -12,7 +12,7 @@ const ToggleButton = (props: IToggleProps) => {
       <div className="flex items-center justify-center">
         <span className="group mx-auto block max-w-xs space-y-3 rounded-lg  border-none p-1  hover:text-yellow-900 ">
           <svg
-            className="h-6 w-6 rounded-md"
+            className="h-6 w-6 rounded-md hover:animate-spin"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -33,7 +33,7 @@ const ToggleButton = (props: IToggleProps) => {
       <div className=" flex items-center justify-center">
         <span className="group mx-auto block max-w-xs space-y-3 rounded-lg  border-none p-1  hover:text-pink-600 ">
           <svg
-            className=" h-6 w-6 "
+            className=" h-6 w-6 hover:animate-pulse"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
