@@ -39,7 +39,7 @@ const Index = () => {
               : 'grayscale-0 blur-none scale-100'
           }`}
           onLoad={() => setLoading(false)}
-          src={`${router.basePath}/assets/images/van-typographytest.gif`}
+          src={`${router.basePath}/assets/images/test.gif`}
           alt="Van is displayed as animated 3D typography style"
         />
       </div>
