@@ -32,6 +32,16 @@ const Index = () => {
           width="1200"
           height="700"
         />
+        <img
+          className={`duration-700 ease-in-out ${
+            isLoading
+              ? 'grayscale-0 blur-md scale-125'
+              : 'grayscale-0 blur-none scale-100'
+          }`}
+          onLoad={() => setLoading(false)}
+          src={`${router.basePath}/assets/images/van-typographytest.gif`}
+          alt="Van is displayed as animated 3D typography style"
+        />
       </div>
     </Main>
   );

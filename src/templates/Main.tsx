@@ -33,16 +33,46 @@ const Main = (props: IMainProps) => (
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/about/">
-                <a className="border-none  hover:text-gray-900">about</a>
+              <Link href="/portfolio/">
+                <a className="border-none  hover:text-gray-900">portfolio</a>
               </Link>
             </li>
             <li className="mr-6">
               <a
                 className="border-none hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
+                href="https://github.com/vahurtad"
+                target="_blank"
+                rel="noreferrer"
               >
                 github
+                <svg
+                  className=" inline h-6 w-6 align-middle hover:text-gray-900"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="currentColor"
+                >
+                  <path d="M7 6a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h2a1 1 0 0 0 0-2H6V6z" />
+                  <path d="M20.82 11.42l-2.82-4a1 1 0 0 0-1.39-.24 1 1 0 0 0-.24 1.4L18.09 11H10a1 1 0 0 0 0 2h8l-1.8 2.4a1 1 0 0 0 .2 1.4 1 1 0 0 0 .6.2 1 1 0 0 0 .8-.4l3-4a1 1 0 0 0 .02-1.18z" />
+                </svg>
+              </a>
+            </li>
+            <li className="mr-6">
+              <a
+                className="border-none hover:text-gray-900"
+                href="https://github.com/vahurtad"
+                target="_blank"
+                rel="noreferrer"
+              >
+                resume
+                <svg
+                  className=" inline h-6 w-6 align-middle hover:text-gray-900"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="currentColor"
+                >
+                  <path d="M7 6a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h2a1 1 0 0 0 0-2H6V6z" />
+                  <path d="M20.82 11.42l-2.82-4a1 1 0 0 0-1.39-.24 1 1 0 0 0-.24 1.4L18.09 11H10a1 1 0 0 0 0 2h8l-1.8 2.4a1 1 0 0 0 .2 1.4 1 1 0 0 0 .6.2 1 1 0 0 0 .8-.4l3-4a1 1 0 0 0 .02-1.18z" />
+                </svg>
               </a>
             </li>
             <ThemeChanger />
