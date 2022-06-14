@@ -6,11 +6,11 @@ import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { AppConfig } from '@/utils/AppConfig';
 
-import logo from '../assets/images/test.gif';
-
 const Index = () => {
   // const router = useRouter();
   const [isLoading, setLoading] = useState(true);
+  // eslint-disable-next-line global-require
+  const logo = require('../assets/images/test.gif');
 
   return (
     <Main
@@ -35,7 +35,7 @@ const Index = () => {
           width="1200"
           height="700"
         />
-        <Image
+        <img
           className={`duration-700 ease-in-out ${
             isLoading
               ? 'grayscale-0 blur-md scale-125'

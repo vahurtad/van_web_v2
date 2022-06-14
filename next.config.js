@@ -1,5 +1,4 @@
 const withPlugins = require('next-compose-plugins');
-
 const optimizedImages = require('next-optimized-images');
 
 /* eslint-disable import/no-extraneous-dependencies */
@@ -47,5 +46,13 @@ module.exports = withPlugins([
       // You can remove `basePath` if you don't need it.
       reactStrictMode: true,
     }),
+  ],
+  [
+    {
+      // https://nextjs.org/docs/basic-features/image-optimization#disable-static-imports
+      images: {
+        disableStaticImages: true,
+      },
+    },
   ],
 ]);
