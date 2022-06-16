@@ -42,7 +42,7 @@ const Index = () => {
               : 'grayscale-0 blur-none scale-100'
           }`}
           onLoad={() => setLoading(false)}
-          src={logo}
+          src={logo.src}
           alt="Van is displayed as animated 3D typography style"
         />
 
