@@ -18,7 +18,7 @@ const nextConfiguration = {
 };
 const optimizedImagesConfig = {
   imagesName: '[name]-[hash].[ext]',
-  handleImages: [']gif'],
+  handleImages: ['gif'],
   gifsicle: {
     interlaced: true,
     optimizationLevel: 3,
