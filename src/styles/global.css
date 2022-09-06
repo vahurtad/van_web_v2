@@ -42,17 +42,6 @@ a:hover {
   @apply my-6;
 }
 
-.imagebackground{
-  background-image: url('../../public/assets/images/test.gif');
-  /* Full height */
-  height: 100%; 
-  width: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .font-canopee {
   letter-spacing: .05em;
   
