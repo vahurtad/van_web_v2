@@ -11,6 +11,10 @@ const nextConfiguration = {
   compression: true,
   // Custom loaders are not recognized by next export:
   // using this change to suppress error for now: https://github.com/vercel/next.js/issues/21079
+  images: {
+    loader: 'imgix',
+    path: 'https://noop/',
+  },
 };
 const optimizedImagesConfig = {
   imagesName: '[name]-[hash].[ext]',
