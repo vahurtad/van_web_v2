@@ -22,7 +22,7 @@ const Index = () => {
               : 'grayscale-0 blur-none scale-100'
           }`}
           onLoadingComplete={() => setLoading(false)}
-          src={`/van-typographytest.gif`}
+          src={`/typography-image.png`}
           alt="Van is displayed as animated 3D typography style"
           layout="responsive"
           quality="100"
