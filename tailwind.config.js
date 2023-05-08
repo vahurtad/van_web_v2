@@ -19,9 +19,17 @@ module.exports = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
-      '6xl': '4rem',
+      '6xl': '3.5rem',
+      '7xl': '5rem',
     },
     extend: {
+      animation: {
+        'bounce-short': 'bounce .8s ease-out .6s 1 normal both',
+        cursor: 'cursor .6s linear infinite alternate',
+        type: 'type 1.8s ease-out .8s 1 normal both',
+        'type-reverse': 'type 1.8s ease-out 0s infinite alternate-reverse both',
+      },
+
       colors: {
         gray: {
           100: '#f7fafc',

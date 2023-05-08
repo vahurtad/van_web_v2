@@ -15,6 +15,7 @@ const Index = () => {
       }
     >
       <div>
+        {/* https://github.com/vercel/next.js/issues/34310 */}
         <Image
           className={`w-16 duration-700 ease-in-out md:w-32 lg:w-48 ${
             isLoading
@@ -22,7 +23,7 @@ const Index = () => {
               : 'grayscale-0 blur-none scale-100'
           }`}
           onLoadingComplete={() => setLoading(false)}
-          src={`/typography-image.png`}
+          src={`/typography-image-optimized.jpg`}
           alt="Van is displayed as animated 3D typography style"
           layout="responsive"
           quality="100"

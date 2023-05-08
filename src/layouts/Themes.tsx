@@ -13,11 +13,7 @@ const ThemeChanger = () => {
 
   const toggleTheme = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
-    return currentTheme === 'dark' ? (
-      <ToggleButton toggle="light" />
-    ) : (
-      <ToggleButton toggle="dark" />
-    );
+    return <ToggleButton toggle={currentTheme === 'dark' ? 'light' : 'dark'} />;
   };
 
   if (!mounted) return null;
