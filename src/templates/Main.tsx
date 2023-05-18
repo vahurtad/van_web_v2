@@ -54,15 +54,14 @@ function LinkSVG() {
 function LinkItem({ name, link, target, rel, type }: ILinkType) {
   return (
     <li className="mr-6">
-      <Link href={link}>
-        <a
-          className="border-none hover:text-pink-600 dark:hover:text-pink-900"
-          target={target}
-          rel={rel}
-        >
-          {name}
-          {type === 'url' ? <LinkSVG /> : <></>}
-        </a>
+      <Link
+        href={link}
+        className="border-none hover:text-pink-600 dark:hover:text-pink-900"
+        target={target}
+        rel={rel}
+      >
+        {name}
+        {type === 'url' ? <LinkSVG /> : <></>}
       </Link>
     </li>
   );
@@ -73,7 +72,7 @@ const Main = ({ meta, children }: IMainProps) => (
     {meta}
 
     <div className="mx-auto h-screen max-w-screen-lg px-8">
-      <div className="border-b border-pink-300 pt-16 pb-8">
+      <div className="border-b border-pink-300 pb-8 pt-16">
         <div className="font-pilowlava text-2xl font-bold text-pink-600 dark:font-nanjaunemaxi dark:text-pink-900 sm:text-3xl md:text-6xl">
           <FontChanger name={AppConfig.title} />
         </div>

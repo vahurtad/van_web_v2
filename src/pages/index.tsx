@@ -19,19 +19,16 @@ const Index = () => {
         <Image
           className={`w-16 duration-700 ease-in-out md:w-32 lg:w-48 ${
             isLoading
-              ? 'grayscale-0 blur-md scale-125'
-              : 'grayscale-0 blur-none scale-100'
+              ? 'scale-125 blur-md grayscale-0'
+              : 'scale-100 blur-none grayscale-0'
           }`}
           onLoadingComplete={() => setLoading(false)}
           src={`/typography-image-optimized.jpg`}
           alt="Van is displayed as animated 3D typography style"
-          layout="responsive"
-          quality="100"
+          quality={75}
           priority
-          width="1200"
-          height="700"
-          // https://uploadcare.com/blog/next-js-image-optimization/
-          unoptimized={true}
+          width={1200}
+          height={700}
           loading="eager"
         />
       </div>

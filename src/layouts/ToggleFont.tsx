@@ -1,39 +1,53 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const MovingComponent = require('react-moving-text');
+import CustomAnimation from '@/layouts/AnimatedText';
 
 type IToggleProps = {
   name: string;
 };
 
-const FontChanger = ({ name }: IToggleProps) => {
-  const { theme } = useTheme();
+// https://bestofreactjs.com/repo/pacocoursey-next-themes-react-nextjs-extensions
+const FontChanger = (props: IToggleProps) => {
   const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme } = useTheme();
 
+  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  const toggleTheme = (type: any) => (
-    <MovingComponent
-      type={type}
-      duration="900ms"
-      delay="0s"
-      direction="normal"
-      timing="ease"
-      iteration="1"
-      fillMode="none"
-    >
-      {name}
-    </MovingComponent>
-  );
+  const toggleTheme = () => {
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+    return currentTheme === 'dark' ? (
+      // https://yidaoj.github.io/react-moving-text/
 
-  return mounted ? (
-    <div>
-      {theme === 'dark'
-        ? toggleTheme('bounce')
-        : toggleTheme('slideInFromLeft')}
-    </div>
-  ) : null;
+      <CustomAnimation
+        animationType="bounce"
+        duration="1900ms"
+        delay="0s"
+        direction="normal"
+        timing="ease"
+        iteration="1"
+        fillMode="none"
+      >
+        {props.name}
+      </CustomAnimation>
+    ) : (
+      <CustomAnimation
+        animationType="jelly"
+        duration="1700ms"
+        delay="0s"
+        direction="normal"
+        timing="ease"
+        iteration="1"
+        fillMode="none"
+      >
+        {props.name}
+      </CustomAnimation>
+    );
+  };
+
+  if (!mounted) return null;
+
+  return <div>{toggleTheme()}</div>;
 };
-
 export { FontChanger };
