@@ -20,7 +20,7 @@ type ILinkType = {
 
 const Links: ILinkType[] = [
   { name: 'home', link: '/' },
-  { name: 'portofolio', link: '/portfolio/' },
+  { name: 'portofolio', link: '/portofolio/' },
   {
     name: 'github',
     link: 'https://github.com/vahurtad',
@@ -30,7 +30,7 @@ const Links: ILinkType[] = [
   },
   {
     name: 'resume',
-    link: 'https://example.com/resume',
+    link: 'https://docs.google.com/document/d/1WSqRFM8AG0JWHQutYZZj4P3sAvGTp_I7MXvPOpToNKc/edit?usp=sharing',
     target: '_blank',
     rel: 'noreferrer',
     type: 'url',
@@ -86,7 +86,7 @@ const Main = ({ meta, children }: IMainProps) => (
         </ul>
       </div>
 
-      <div className="content py-5 text-xl">{children}</div>
+      <div className="content py-5 text-xl ">{children}</div>
 
       <footer className=" p-4"></footer>
     </div>

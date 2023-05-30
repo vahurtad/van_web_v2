@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Portfolio from '@/pages/portfolio';
+import Portofolio from '@/pages/portofolio';
 
 // The easiest solution to mock `next/router`: https://github.com/vercel/next.js/issues/7479
 // The mock has been moved to `__mocks__` folder to avoid duplication
@@ -8,7 +8,7 @@ import Portfolio from '@/pages/portfolio';
 describe('About page', () => {
   describe('Render method', () => {
     it('should have two paragraphs of `Lorem ipsum`', () => {
-      render(<Portfolio />);
+      render(<Portofolio />);
 
       const paragraph = screen.getAllByText(/Lorem ipsum/);
 

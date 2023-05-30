@@ -11,12 +11,17 @@ interface CustomAnimationProps {
 }
 
 const bounce = keyframes`
-  10% { transform: scaleY(0.9) translateY(5%); }
-  45% { transform: scaleY(1.2) translateY(-100%); }
-  65% { transform: scaleY(0.95) translateY(0); }
-  75% { transform: scaleY(1.05) translateY(-25%); }
-  85% { transform: scaleY(1) translateY(0); }
-  100% { transform: scaleY(1) translateY(0%); }
+0% { transform: scaleY(1); }
+10% { transform: scaleY(0.9); }
+20% { transform: scaleY(1.1); }
+30% { transform: scaleY(0.95); }
+40% { transform: scaleY(1.05); }
+50% { transform: scaleY(0.98); }
+60% { transform: scaleY(1.02); }
+70% { transform: scaleY(0.99); }
+80% { transform: scaleY(1.01); }
+90% { transform: scaleY(1); }
+100% { transform: scaleY(1); }
 `;
 
 const fadeOut = keyframes`
@@ -27,40 +32,38 @@ const fadeOut = keyframes`
 const jelly = keyframes`
   0% { transform: scaleX(1); }
   20% { transform: scaleX(0.9); }
-  50% { transform: scaleX(1.25); }
-  85% { transform: scaleX(0.8); }
+  40% { transform: scaleX(1.1); }
+  60% { transform: scaleX(0.95); }
+  80% { transform: scaleX(1.05); }
   100% { transform: scaleX(1); }
 `;
 
 const CustomAnimation = styled.div<CustomAnimationProps>`
   ${({
-    animationType,
-    duration,
-    delay,
-    direction,
-    timing,
-    iteration,
-    fillMode,
+    animationType = '',
+    delay = '0s',
+    duration = '1s',
+    direction = 'normal',
+    timing = 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+    iteration = '1',
+    fillMode = 'none',
   }) => {
     if (animationType === 'bounce') {
       return css`
-        animation: ${bounce} ${duration || '1s'} ${timing || 'ease'}
-          ${delay || '0s'} ${iteration || '1'} ${direction || 'normal'}
-          ${fillMode || 'none'};
+        animation: ${bounce} 1s ${timing} ${delay} ${iteration} ${direction}
+          ${fillMode};
       `;
     }
     if (animationType === 'fadeOut') {
       return css`
-        animation: ${fadeOut} ${duration || '1s'} ${timing || 'ease'}
-          ${delay || '0s'} ${iteration || '1'} ${direction || 'normal'}
-          ${fillMode || 'none'};
+        animation: ${fadeOut} ${duration} ${timing} ${delay} ${iteration}
+          ${direction} ${fillMode};
       `;
     }
     if (animationType === 'jelly') {
       return css`
-        animation: ${jelly} ${duration || '1s'} ${timing || 'ease'}
-          ${delay || '0s'} ${iteration || '1'} ${direction || 'normal'}
-          ${fillMode || 'none'};
+        animation: ${jelly} ${duration} ${timing} ${delay} ${iteration}
+          ${direction} ${fillMode};
       `;
     }
     return '';

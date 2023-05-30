@@ -14,8 +14,14 @@ const Index = () => {
         <Meta title={AppConfig.title} description={AppConfig.description} />
       }
     >
-      <div>
-        {/* https://github.com/vercel/next.js/issues/34310 */}
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: 0,
+          paddingTop: '56.25%',
+        }}
+      >
         <Image
           className={`w-16 duration-700 ease-in-out md:w-32 lg:w-48 ${
             isLoading
@@ -23,12 +29,11 @@ const Index = () => {
               : 'scale-100 blur-none grayscale-0'
           }`}
           onLoadingComplete={() => setLoading(false)}
-          src={`/typography-image-optimized.jpg`}
+          src={`/typography-image.png`}
           alt="Van is displayed as animated 3D typography style"
-          quality={75}
           priority
-          width={1200}
-          height={700}
+          layout="fill"
+          objectFit="cover"
           loading="eager"
         />
       </div>
