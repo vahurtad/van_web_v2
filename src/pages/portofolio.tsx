@@ -63,7 +63,7 @@ const Portfolio = () => {
             className="static m-8 h-72 w-72 rounded-lg bg-pink-600"
           >
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              <div className="absolute -m-2 h-72 w-72 rounded-lg bg-yellow-50 shadow-lg transition-all duration-150 ease-out hover:m-0 hover:shadow-2xl hover:ease-in">
+              <div className="absolute -m-2 h-72 w-72 rounded-lg bg-yellow-50 font-literata text-gray-700 shadow-lg transition-all duration-150 ease-out hover:m-0 hover:shadow-2xl hover:ease-in">
                 <h1 className="m-4 text-2xl font-bold">{repo.name}</h1>
                 <hr className="m-4 rounded-2xl border-t-2" />
                 <p className="m-4 text-sm">{repo.description}</p>

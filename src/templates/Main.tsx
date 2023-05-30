@@ -94,7 +94,19 @@ const Main = ({ meta, children }: IMainProps) => (
 
       <div className="content py-5 text-xl ">{children}</div>
 
-      <footer className="p-4"></footer>
+      <footer className="border-t border-pink-300 py-8 text-center text-sm">
+        <p>
+          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
+          <Link
+            href="https://github.com/ixartz/Next-js-Boilerplate"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-300 transition-colors duration-300 hover:text-pink-600"
+          >
+            CreativeDesignsGuru
+          </Link>
+        </p>
+      </footer>
     </div>
   </div>
 );
