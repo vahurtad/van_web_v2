@@ -18,6 +18,11 @@ const ThemeChanger = () => {
 
   if (!mounted) return null;
 
-  return <div>{toggleTheme()}</div>;
+  return (
+    <div className="mt-4">
+      <div className="h-12 w-12">{toggleTheme()}</div>
+    </div>
+  );
 };
+
 export { ThemeChanger };

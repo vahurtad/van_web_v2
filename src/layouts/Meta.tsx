@@ -59,6 +59,9 @@ const Meta = (props: IMetaProps) => {
           site_name: AppConfig.site_name,
         }}
       />
+      <a href="#content" className="skip-nav">
+        Skip to main content
+      </a>
     </>
   );
 };

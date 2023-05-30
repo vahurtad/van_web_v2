@@ -53,15 +53,18 @@ function LinkSVG() {
 
 function LinkItem({ name, link, target, rel, type }: ILinkType) {
   return (
-    <li className="mr-6">
+    <li className="my-2 mr-6">
       <Link
+        passHref
         href={link}
         className="border-none hover:text-pink-600 dark:hover:text-pink-900"
         target={target}
         rel={rel}
       >
-        {name}
-        {type === 'url' ? <LinkSVG /> : <></>}
+        <button className="flex h-10 w-32 items-center rounded-lg bg-pink-600 px-4 py-2 text-lg text-white transition-colors duration-300 hover:bg-pink-700 dark:bg-pink-900 dark:text-pink-100">
+          {name}
+          {type === 'url' ? <LinkSVG /> : null}
+        </button>
       </Link>
     </li>
   );
@@ -73,7 +76,10 @@ const Main = ({ meta, children }: IMainProps) => (
 
     <div className="mx-auto h-screen max-w-screen-lg px-8">
       <div className="border-b border-pink-300 pb-8 pt-16">
-        <div className="font-pilowlava text-2xl font-bold text-pink-600 dark:font-nanjaunemaxi dark:text-pink-900 sm:text-3xl md:text-6xl">
+        <div
+          id="content"
+          className="font-pilowlava text-2xl font-bold text-pink-600 dark:font-nanjaunemaxi dark:text-pink-900 sm:text-3xl md:text-6xl"
+        >
           <FontChanger name={AppConfig.title} />
         </div>
 
@@ -88,7 +94,7 @@ const Main = ({ meta, children }: IMainProps) => (
 
       <div className="content py-5 text-xl ">{children}</div>
 
-      <footer className=" p-4"></footer>
+      <footer className="p-4"></footer>
     </div>
   </div>
 );

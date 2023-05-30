@@ -1,16 +1,15 @@
 @tailwind base;
 
---pink: #FF95C5
---red: #FF0000
-
+--pink: #FF95C5;
+--red: #FF0000;
 
 .dark {
   background-color: #3B0000;
   color: #FFF6CD;
 }
 
-.light{
-  background-color: #FFF6CD;  
+.light {
+  background-color: #FFF6CD;
 }
 
 a {
@@ -19,6 +18,23 @@ a {
 
 a:hover {
   @apply border-b-2 border-blue-700;
+}
+
+.skip-nav {
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  z-index: 9999;
+}
+
+.skip-nav:focus,
+.skip-nav:active {
+  top: 0;
 }
 
 @tailwind components;
@@ -30,6 +46,7 @@ a:hover {
   right: 0;
   border-color: #68D391;
 }
+
 .toggle-checkbox:checked + .toggle-label {
   @apply: bg-green-400;
   background-color: #68D391;
@@ -69,27 +86,32 @@ a:hover {
   @font-face {
     font-family: Pilowlava;
     font-weight: 400;
-    src: url("../fonts/Pilowlava-Regular.otf") format('opentype'); 
+    font-display: swap;
+    src: url("../fonts/Pilowlava-Regular.otf") format('opentype');
   }
 
   @font-face {
     font-family: NaN Jaune Mini;
-    src: url("../fonts/NaNJaune-MiniBlond-1.otf") format('opentype'); 
+    font-display: swap;
+    src: url("../fonts/NaNJaune-MiniBlond-1.otf") format('opentype');
   }
 
   @font-face {
     font-family: NaN Jaune Maxi;
-    src: url("../fonts/NaNJaune-MaxiBold-1.otf") format('opentype'); 
+    font-display: swap;
+    src: url("../fonts/NaNJaune-MaxiBold-1.otf") format('opentype');
   }
 
   @font-face {
     font-family: Canopee;
-    src: url("../fonts/canopee.woff"); 
+    font-display: swap;
+    src: url("../fonts/canopee.woff") format('woff');
     letter-spacing: .3em;
   }
 
   @font-face {
     font-family: Literata;
-    src: url("../fonts/Literata_20pt-Regular.ttf"); 
+    font-display: swap;
+    src: url("../fonts/Literata_20pt-Regular.ttf") format('truetype');
   }
 }
