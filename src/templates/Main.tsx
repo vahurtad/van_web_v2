@@ -18,12 +18,22 @@ type ILinkType = {
   type?: string;
 };
 
+// TODO: link text not centered
+// TODO:
+
 const Links: ILinkType[] = [
   { name: 'home', link: '/' },
   { name: 'portofolio', link: '/portofolio/' },
   {
     name: 'github',
     link: 'https://github.com/vahurtad',
+    target: '_blank',
+    rel: 'noreferrer',
+    type: 'url',
+  },
+  {
+    name: 'linkedin',
+    link: 'https://www.linkedin.com/in/hurtadovanessa/',
     target: '_blank',
     rel: 'noreferrer',
     type: 'url',
@@ -40,7 +50,7 @@ const Links: ILinkType[] = [
 function LinkSVG() {
   return (
     <svg
-      className="inline h-6 w-6 align-middle hover:text-pink-600 dark:hover:text-pink-900"
+      className="inline h-6 w-6 align-middle"
       viewBox="0 0 24 24"
       stroke="currentColor"
       fill="currentColor"
@@ -61,7 +71,7 @@ function LinkItem({ name, link, target, rel, type }: ILinkType) {
         target={target}
         rel={rel}
       >
-        <button className="flex h-10 w-32 items-center rounded-lg bg-pink-600 px-4 py-2 text-lg text-white transition-colors duration-300 hover:bg-pink-700 dark:bg-pink-900 dark:text-pink-100">
+        <button className="flex h-10 w-32 items-center justify-center rounded-lg bg-pink-600 px-4 py-2 text-center text-lg text-white transition-colors duration-300 hover:bg-pink-700 dark:bg-pink-900 dark:text-pink-100">
           {name}
           {type === 'url' ? <LinkSVG /> : null}
         </button>
