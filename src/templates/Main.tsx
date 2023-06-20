@@ -50,7 +50,7 @@ const Links: ILinkType[] = [
 function LinkSVG() {
   return (
     <svg
-      className="inline h-6 w-6 align-middle"
+      className="inline h-5 w-5 align-middle"
       viewBox="0 0 24 24"
       stroke="currentColor"
       fill="currentColor"
